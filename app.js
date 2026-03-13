@@ -3,7 +3,7 @@ const express = require('express');
 const jwt = require('jsonwebtoken');
 const app = express();
 const PORT = process.env.PORT || 3000;
-const VERSION = process.env.APP_VERSION || "6.1.1";
+const VERSION = process.env.APP_VERSION || "7";
 const FLAG = process.env.FLAG || "FLAG{f4k3_fl4g_f0r_t3st1ng}";
 
 app.use(express.json());
