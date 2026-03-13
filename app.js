@@ -3,7 +3,7 @@ const express = require('express');
 const jwt = require('jsonwebtoken');
 const app = express();
 const PORT = process.env.PORT || 3000;
-const VERSION = process.env.APP_VERSION || "7";
+const VERSION = process.env.APP_VERSION || "6.1.1";
 const FLAG = process.env.FLAG || "FLAG{f4k3_fl4g_f0r_t3st1ng}";
 
 app.use(express.json());
@@ -58,7 +58,7 @@ app.get('/api/secure', authenticateToken, (req, res) => {
 
 // Admin Route
 app.get('/admin', authenticateToken, authorizeAdmin, (req, res) => {
-    res.send(`<h1>Admin Panel</h1><p>Welcome to School, Admin!</p><p><b>Flag:</b> ${FLAG}</p>`);
+    res.send(`<h1>Admin Panel</h1><p>Welcome 123, Admin!</p><p><b>Flag:</b> ${FLAG}</p>`);
 });
 
 app.listen(PORT, () => {
